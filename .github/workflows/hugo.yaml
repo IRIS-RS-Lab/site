@@ -1,7 +1,8 @@
-name: Build and deploy (Hugo)
+name: Deploy Hugo site to Pages
+
 on:
   push:
-    branches: [main]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -10,32 +11,43 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
 
-      - uses: actions/configure-pages@v5
-        id: pages
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
 
-      - name: Install Hugo (extended)
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.156.0'
+          # 【绝对禁止修改此版本号】HugoBlox v5 强依赖 0.128.2
+          hugo-version: '0.128.2'
           extended: true
 
-      - name: Build
-        run: |
-          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify --baseURL "https://iris-rs-lab.github.io/site/"
 
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
@@ -46,5 +58,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
