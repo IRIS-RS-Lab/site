@@ -1,4 +1,4 @@
-baseURL: "https://iris-rs-lab.github.io/site/"
+baseURL: "https://iris-rs-lab.github.io/"
 relativeURLs: true
 canonifyURLs: false
 title: "IRIS | Intelligent Remote-sensing Information Systems & Applications"
