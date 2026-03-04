@@ -33,6 +33,50 @@ sections:
         
         > For contributors: see `TEMPLATES/` for copy-paste templates.
   - block: collection
+    id: news
+    content:
+      title: Latest News
+      subtitle: ''
+      text: |
+        Seminars, visits, competitions, and milestones.
+      count: 5
+      filters:
+        folders:
+          - post
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
+  - block: collection
+    id: news
+    content:
+      title: Latest News
+      subtitle: ''
+      text: |
+        Seminars, visits, competitions, and milestones.
+      count: 5
+      filters:
+        folders:
+          - post
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
+  - block: collection
     id: projects
     content:
       title: Featured Projects
@@ -97,7 +141,7 @@ sections:
       sort_by: "Date"
       sort_ascending: false
     design:
-      view: card
+      view: compact
   - block: markdown
     content:
       title: Contact

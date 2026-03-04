@@ -33,6 +33,50 @@ sections:
         
         > 想快速开始维护内容？直接参考仓库里的 `TEMPLATES/` 模板（论文/项目/动态）。
   - block: collection
+    id: news
+    content:
+      title: 最新动态
+      subtitle: ''
+      text: |
+        组会、学术交流、竞赛与重要里程碑。
+      count: 5
+      filters:
+        folders:
+          - post
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
+  - block: collection
+    id: news
+    content:
+      title: 最新动态
+      subtitle: ''
+      text: |
+        组会、学术交流、竞赛与重要里程碑。
+      count: 5
+      filters:
+        folders:
+          - post
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
+  - block: collection
     id: projects
     content:
       title: 精选项目
@@ -97,7 +141,7 @@ sections:
       sort_by: "Date"
       sort_ascending: false
     design:
-      view: card
+      view: compact
   - block: markdown
     content:
       title: 联系我们
