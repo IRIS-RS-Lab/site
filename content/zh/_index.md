@@ -32,11 +32,77 @@ sections:
         - **系统与应用**：数据集/基准、开源工具链、行业落地与可解释性。
         
         > 想快速开始维护内容？直接参考仓库里的 `TEMPLATES/` 模板（论文/项目/动态）。
+  - block: collection
+    id: news
+    content:
+      title: 最新动态
+      subtitle: ''
+      text: |
+        组会、学术交流、竞赛与重要里程碑。
+      count: 5
+      filters:
+        folders:
+          - post
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
+  - block: collection
+    id: projects
+    content:
+      title: 精选项目
+      subtitle: ''
+      text: |
+        展示课题组的代表性项目、系统与数据集。
+      count: 6
+      filters:
+        folders:
+          - project
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
+  - block: collection
+    id: pubs
+    content:
+      title: 最新论文
+      subtitle: ''
+      text: |
+        持续更新的论文列表与详情页面。
+      count: 8
+      filters:
+        folders:
+          - publication
+        tag: ""
+        category: ""
+        featured_only: false
+        exclude_featured: false
+        exclude_future: false
+        exclude_past: false
+      offset: 0
+      sort_by: "Date"
+      sort_ascending: false
+    design:
+      view: compact
   - block: markdown
     content:
       title: 联系我们
       text: |
-        - 邮箱：`contact@iris-lab.org`（建议后续替换为你们实际邮箱）
+        - 邮箱：`contact@iris-lab.org`
         - 位置：`XXX University / XXX Lab`
         
         > 合作与招生：请见 **加入我们** 页面。

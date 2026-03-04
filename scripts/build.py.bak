@@ -1,6 +1,5 @@
 import datetime
 import os
-import sys
 
 today =datetime.date.today()
 # 格式化输出
