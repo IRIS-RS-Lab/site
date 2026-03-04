@@ -1,7 +1,7 @@
 ---
 title: "Nested Regression Based Optimal Selection (NRBOS) of Rational Polynomial Coefficients"
 date: 2014-03-01
-summary: "Published in Photogrammetric Engineering \& Remote Sensing."
+summary: "Published in Photogrammetric Engineering & Remote Sensing."
 authors: ["Long, Tengfei", "Jiao, Weili", "He, Guojin"]
 tags: ["notion"]
 featured: false
