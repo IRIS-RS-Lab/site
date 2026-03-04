@@ -36,12 +36,11 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.142.0'
+          hugo-version: '0.138.0'
           extended: true
 
       - name: Build with Hugo
         env:
-          # 确保生成生产级环境（Minify、去除 Drafts）
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: hugo --minify
