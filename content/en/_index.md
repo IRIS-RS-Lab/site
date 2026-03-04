@@ -30,26 +30,14 @@ sections:
         - **Remote Sensing Interpretation**: change detection, segmentation, multi-sensor fusion (optical/SAR).
         - **Computer Vision**: representation learning, generalization, multimodal understanding, reliable evaluation.
         - **Systems & Applications**: datasets/benchmarks, open-source toolchains, real-world impact and explainability.
-        
-        > For contributors: see `TEMPLATES/` for copy-paste templates.
   - block: collection
     id: news
     content:
       title: Latest News
-      subtitle: ''
-      text: |
-        Seminars, visits, competitions, and milestones.
       count: 5
       filters:
         folders:
           - post
-        tag: ""
-        category: ""
-        featured_only: false
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-      offset: 0
       sort_by: "Date"
       sort_ascending: false
     design:
@@ -58,20 +46,10 @@ sections:
     id: projects
     content:
       title: Featured Projects
-      subtitle: ''
-      text: |
-        Selected projects, systems, and datasets.
       count: 6
       filters:
         folders:
           - project
-        tag: ""
-        category: ""
-        featured_only: false
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-      offset: 0
       sort_by: "Date"
       sort_ascending: false
     design:
@@ -80,20 +58,10 @@ sections:
     id: pubs
     content:
       title: Latest Publications
-      subtitle: ''
-      text: |
-        Up-to-date publications with detail pages.
       count: 8
       filters:
         folders:
           - publication
-        tag: ""
-        category: ""
-        featured_only: false
-        exclude_featured: false
-        exclude_future: false
-        exclude_past: false
-      offset: 0
       sort_by: "Date"
       sort_ascending: false
     design:
@@ -104,6 +72,4 @@ sections:
       text: |
         - Email: `contact@iris-lab.org`
         - Location: `XXX University / XXX Lab`
-        
-        > For openings and collaborations, see **Join**.
 ---
