@@ -4,6 +4,8 @@ date: <YYYY-MM-DD>
 summary: "一句话贡献：解决什么问题 + 核心结果。"
 authors: ["负责人 / PI（示例）"]
 tags: ["Remote Sensing", "Segmentation"]
+# image:
+#   filename: "my-custom-image.jpg"
 featured: true
 links:
   - name: PDF

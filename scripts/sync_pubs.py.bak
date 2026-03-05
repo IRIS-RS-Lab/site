@@ -71,10 +71,9 @@ def generate_hugo_bundle(entry: dict, target_dir: Path, lang: str):
 title: "{title}"
 date: {date_str}
 summary: "{summary}"
-authors:[{authors_str}]
+authors: [{authors_str}]
 tags: [{tags_str}]
 featured: false
-# 🔴 如果你想为这篇论文添加详细页面，请删除下面这行 `external_link`
 external_link: "#no-detail"
 links:
   - name: PDF
@@ -87,10 +86,10 @@ links:
 
 <!-- 
 === 论文详情页存根 ===
-当前论文在列表中不可点击（无详情页）。
-如果需要展示详细页面，请：
-1. 删除上方的 `external_link: "#no-detail"`
-2. 取消注释下方的正文内容并填写你的介绍
+状态：当前论文在列表中不可点击。
+若需为其添加详细页面，请执行以下两步：
+1. 删掉上方 Front Matter 中的 `external_link: "#no-detail"` 行。
+2. 取消下方内容的注释，并补充详细信息。
 -->
 
 <!--
@@ -98,9 +97,9 @@ links:
 {abstract}
 
 ## 方法与结果
-(如果你有配图，将其命名为 featured.jpg 放在当前文件夹即可，引擎会自动抓取)
+（若有相关配图，将图片命名为 featured.jpg 放置于当前文件夹，主页列表将自动抓取该图展示）
 
-## 引用格式
+## 引用
 ```bibtex
 @article{{{citekey},
   title={{{title}}},

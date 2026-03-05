@@ -4,6 +4,8 @@ date: <YYYY-MM-DD>
 summary: "One-line contribution: problem + key result."
 authors: ["PI (Example)"]
 tags: ["Remote Sensing", "Segmentation"]
+# image:
+#   filename: "my-custom-image.jpg"
 featured: true
 links:
   - name: PDF

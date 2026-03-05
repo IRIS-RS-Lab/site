@@ -1,92 +1,88 @@
-/* 修复次要文本对比度过低的问题，但不破坏主题深色区块的反色机制 */
-.text-muted, .article-metadata {
-  color: #495057;
-}[data-theme="dark"] .text-muted, [data-theme="dark"] .article-metadata {
-  color: #94a3b8;
-}
-
-/* 导航栏立体感与 RSIDEA 风格底边线 */
-.hb-header {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-bottom: 3px solid var(--hb-primary);
-}
-
-// 强制触发 Hugo 的 SCSS 编译器 (修复 Concat Media Type 报错)
+// 强制触发 SCSS 编译器
 $force-scss-mime-type: true;
 
-/* ==================== 视觉体系重构 ==================== */
-/* 1. 强制浅色纯白背景 (提升学术干净度) */
-:root, [data-theme="light"] {
+/* ==========================================================================
+   1. 基础色彩与学术纯白背景
+   ========================================================================== */
+:root, [data-theme="light"], body {
   --hb-body-bg: #ffffff !important;
   --hb-background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
-/* 2. 修复次要文本对比度过低的问题 */
-.text-muted, .article-metadata {
-  color: #495057;
-}
-[data-theme="dark"] .text-muted, [data-theme="dark"] .article-metadata {
-  color: #94a3b8;
-}
-
-/* 3. 拦截无详情页论文的点击行为（Fail Fast 拦截） */
-a[href$="#no-detail"] {
-  pointer-events: none !important;
-  color: inherit !important;
-  text-decoration: none !important;
-  cursor: default !important;
-}
-
-/* 4. 图片圆角、统一裁剪比例与悬浮动效 */
-.card img {
-  border-radius: 8px 8px 0 0 !important;
-  object-fit: cover !important;
-  box-shadow: none !important;
-  transform: none !important;
-}
-.media.stream-item img, .hb-collection-item img, .article-banner img, .featured-image img {
-  border-radius: 8px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  object-fit: cover !important;
+/* ==========================================================================
+   2. 列表页 RSIDEA 风格精美卡片 (左图右文 + 圆角悬浮)
+   ========================================================================== */
+.media.stream-item, .hb-collection-item {
+  display: flex !important;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.media.stream-item img:hover, .hb-collection-item img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+
+.media.stream-item:hover, .hb-collection-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
 }
 
-/* 5. 导航栏立体感与课题组特有底边线 */
-.hb-header {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-bottom: 3px solid var(--hb-primary);
+/* 强制图片在左侧 (Flexbox 重排) */
+.media.stream-item .media-body, .hb-collection-item .media-body {
+  order: 2;
+  flex: 1;
+  padding-left: 24px;
 }
-.card {
-  background-color: var(--hb-body-bg);
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+/* 封面图片美化：统一尺寸、圆角、裁切 */
+.media.stream-item a:not(.media-body a), .hb-collection-item a:not(.media-body a) {
+  order: 1;
+  flex-shrink: 0;
 }
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+
+.media.stream-item img, .hb-collection-item img {
+  width: 240px !important;
+  height: 160px !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
-[data-theme="dark"] .card {
-  border-color: rgba(255, 255, 255, 0.1) !important;
+
+/* 移动端自适应：改为上下结构 */
+@media (max-width: 768px) {
+  .media.stream-item, .hb-collection-item { 
+    flex-direction: column !important; 
+    align-items: stretch; 
+  }
+  .media.stream-item .media-body, .hb-collection-item .media-body { 
+    order: 2; 
+    padding-left: 0; 
+    padding-top: 16px; 
+  }
+  .media.stream-item a:not(.media-body a), .hb-collection-item a:not(.media-body a) { 
+    order: 1; 
+  }
+  .media.stream-item img, .hb-collection-item img { 
+    width: 100% !important; 
+    height: auto !important; 
+    aspect-ratio: 3/2;
+  }
 }
-.section-heading h1 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-  margin-bottom: 1.5rem;
+
+/* ==========================================================================
+   3. 阻断无详情页论文的点击跳转 (Fail Fast)
+   ========================================================================== */
+a[href$="#no-detail"] {
+  pointer-events: none !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
 }
-.section-heading h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  height: 4px;
-  background-color: var(--hb-primary);
-  border-radius: 2px;
+
+/* 修复被阻断点击的标题悬停颜色，保持学术稳重 */
+a[href$="#no-detail"] h3 {
+  color: var(--hb-heading) !important;
 }
