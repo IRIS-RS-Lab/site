@@ -3,8 +3,6 @@ title: "<Project Name>"
 date: <YYYY-MM-DD>
 summary: "A benchmark and toolchain for multi-source remote sensing change detection (example)."
 tags: ["Remote Sensing", "Benchmark"]
-# image:
-#   filename: "my-custom-image.jpg"
 featured: true
 links:
   - name: Code

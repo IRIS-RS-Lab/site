@@ -3,6 +3,8 @@ title: "<项目名称>"
 date: <YYYY-MM-DD>
 summary: "一个面向多源遥感变化检测的基准与工具链（示例）。"
 tags: ["Remote Sensing", "Benchmark"]
+# image:
+#   filename: "my-custom-image.jpg"
 featured: true
 links:
   - name: Code
