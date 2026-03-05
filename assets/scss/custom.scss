@@ -1,43 +1,60 @@
-/* =======================================================================
-   ACADEMIC UI SYSTEM (High-Contrast Fix)
-   ======================================================================= */
-
-// 强制设置全局文本颜色，解决文字隐形问题
-body, p, h1, h2, h3, h4, h5, h6, li, a {
-  color: #111 !important; 
+/* 强制高对比度文字 (Fail Fast 策略：覆盖所有不可辨识的默认颜色) */
+body {
+  color: var(--hb-text) !important;
+  font-weight: 400;
 }
 
-// 辅助文字（如日期、元数据）采用深灰色，保留层次
-.article-metadata, .text-muted, .text-gray-500 {
-  color: #666 !important;
+h1, h2, h3, h4, h5, h6, .hb-heading {
+  color: var(--hb-heading) !important;
+  font-weight: 700;
 }
 
-// 强制修复链接颜色，确保可辨识
-a {
-  color: #0056b3 !important;
-  text-decoration: underline;
+/* 修复次要文本对比度过低的问题 */
+.text-muted, .article-metadata {
+  color: #495057 !important;
+}
+[data-theme="dark"] .text-muted,[data-theme="dark"] .article-metadata {
+  color: #94a3b8 !important;
 }
 
-// 布局微调：恢复简洁风格
-html {
-  font-size: 15px !important;
+/* 导航栏立体感与 RSIDEA 风格底边线 */
+.hb-header {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid var(--hb-primary);
 }
 
-// 扁平化设计 (保留)
-.card, .btn {
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  border: 1px solid #ddd !important;
+/* 卡片容器：物理隔离，避免背景色混杂导致文字发虚 */
+.card {
+  background-color: var(--hb-body-bg);
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-// 标题紧凑化
-h1, .hero-title {
-  font-size: 2.2rem !important;
-  margin-bottom: 1.5rem !important;
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
-.section-heading {
-  font-size: 1.6rem !important;
-  border-bottom: 1px solid #000 !important;
-  padding-bottom: 0.5rem !important;
+[data-theme="dark"] .card {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 模块标题装饰：学术严谨风底边线 */
+.section-heading h1 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 1.5rem;
+}
+.section-heading h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 4px;
+  background-color: var(--hb-primary);
+  border-radius: 2px;
 }

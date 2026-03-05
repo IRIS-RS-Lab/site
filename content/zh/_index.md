@@ -41,7 +41,7 @@ sections:
       sort_by: "Date"
       sort_ascending: false
     design:
-      view: compact
+      view: card
   - block: collection
     id: projects
     content:
@@ -53,7 +53,7 @@ sections:
       sort_by: "Date"
       sort_ascending: false
     design:
-      view: compact
+      view: card
   - block: collection
     id: pubs
     content:
