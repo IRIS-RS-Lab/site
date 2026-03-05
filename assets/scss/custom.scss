@@ -1,44 +1,43 @@
 /* =======================================================================
-   ACADEMIC UI SYSTEM (Cleaned: Layout Only)
-   仅负责：去圆角、去阴影、调间距。配色交还给主题。
+   ACADEMIC UI SYSTEM (High-Contrast Fix)
    ======================================================================= */
 
-// 1. 基础字号
+// 强制设置全局文本颜色，解决文字隐形问题
+body, p, h1, h2, h3, h4, h5, h6, li, a {
+  color: #111 !important; 
+}
+
+// 辅助文字（如日期、元数据）采用深灰色，保留层次
+.article-metadata, .text-muted, .text-gray-500 {
+  color: #666 !important;
+}
+
+// 强制修复链接颜色，确保可辨识
+a {
+  color: #0056b3 !important;
+  text-decoration: underline;
+}
+
+// 布局微调：恢复简洁风格
 html {
   font-size: 15px !important;
 }
 
-// 2. 强行抹除圆角与阴影 (Flat Design)
-.card, .section-card, .btn {
+// 扁平化设计 (保留)
+.card, .btn {
   border-radius: 0 !important;
   box-shadow: none !important;
-  border: 1px solid #d1d5db !important;
+  border: 1px solid #ddd !important;
 }
 
-// 3. Hero 区域：极度紧凑
-.wg-hero {
-  padding: 4rem 0 !important;
-  text-align: left !important;
+// 标题紧凑化
+h1, .hero-title {
+  font-size: 2.2rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
-.hero-title {
-  font-size: 2.5rem !important;
-  line-height: 1.2 !important;
-  margin-bottom: 1rem !important;
-}
-
-// 4. 列表紧凑化
-.article-title {
-  font-weight: 500 !important;
-}
-
-// 5. Section 标题
 .section-heading {
   font-size: 1.6rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.02em !important;
-  margin-bottom: 2rem !important;
   border-bottom: 1px solid #000 !important;
-  display: inline-block;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.5rem !important;
 }

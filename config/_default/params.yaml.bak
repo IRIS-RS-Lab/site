@@ -3,8 +3,8 @@ hugoblox:
   schema: "2.0"
 
   appearance:
-    mode: system
-    color_theme: minimal
+    mode: light
+    color_theme: default
     font: inter
 
   identity:

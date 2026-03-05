@@ -5,7 +5,7 @@ hugoblox:
   appearance:
     mode: light
     color_theme: default
-    font: inter
+    font: default
 
   identity:
     # Shown in navbar/footer and SEO meta
