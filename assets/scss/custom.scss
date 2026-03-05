@@ -1,214 +1,278 @@
-// 强制触发 SCSS 编译器
+// Force SCSS pipeline
 $force-scss-mime-type: true;
 
-/* ==========================================================================
-   1. 页面底色：极其微弱的浅灰 (这是凸显纯白卡片的关键)
-   ========================================================================== */
-html, body, .hb-page-wrapper, main, section, .page-body {
-  background-color: #fafafa !important;
-  color: #333333 !important;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+:root {
+  --iris-bg: #f5f8fc;
+  --iris-surface: #ffffff;
+  --iris-surface-soft: #f8fbff;
+  --iris-border: #d8e2ef;
+  --iris-text: #243246;
+  --iris-muted: #5a6b80;
+  --iris-heading: #132239;
+  --iris-primary: #0c4f95;
+  --iris-primary-hover: #083c72;
+  --iris-shadow: 0 10px 28px rgba(19, 34, 57, 0.08);
+  --iris-shadow-soft: 0 4px 14px rgba(19, 34, 57, 0.06);
+  --iris-radius: 12px;
 }
 
-/* 暴力剥夺 Tailwind 深色属性 */[data-theme="dark"], .dark,[class*="dark:bg-"] {
-  background-color: #fafafa !important;
-}[class*="dark:border-"] {
-  border-color: #eaeaea !important;
+html,
+body,
+.hb-page-wrapper,
+main,
+section,
+.page-body {
+  background: var(--iris-bg) !important;
+  color: var(--iris-text) !important;
 }
 
-h1, h2, h3, h4, h5, h6, .hb-heading {
-  color: #111827 !important;
-  font-weight: 700 !important;
+[data-theme="dark"],
+.dark {
+  background: var(--iris-bg) !important;
+  color: var(--iris-text) !important;
 }
 
-/* ==========================================================================
-   2. 导航栏纯白与分离
-   ========================================================================== */
-.hb-header, .navbar {
-  background-color: #ffffff !important;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
-  border-bottom: 1px solid #eaeaea !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hb-heading {
+  color: var(--iris-heading) !important;
 }
+
+p,
+li,
+.article-style,
+.text-muted,
+.article-metadata {
+  color: var(--iris-text) !important;
+}
+
+a {
+  color: var(--iris-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--iris-primary-hover);
+}
+
+.container,
+.container-lg,
+.container-xl,
+.universal-wrapper,
+.article-container {
+  max-width: 1140px;
+}
+
+.home-section {
+  padding: 3.5rem 0 !important;
+}
+
+.hb-header,
+.navbar {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--iris-border) !important;
+  box-shadow: var(--iris-shadow-soft) !important;
+}
+
+.navbar-brand {
+  background: var(--iris-surface-soft);
+  border: 1px solid var(--iris-border);
+  border-radius: 10px;
+  padding: 0.35rem 0.6rem;
+}
+
 .navbar-brand img {
-  height: 48px !important;
+  height: 46px !important;
   width: auto !important;
   object-fit: contain;
-  mix-blend-mode: multiply !important; 
+  mix-blend-mode: normal !important;
 }
+
 .navbar-nav .nav-link {
-  color: #333333 !important;
-  font-weight: 500;
-}
-.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
-  color: #00468c !important;
+  color: var(--iris-text) !important;
+  font-weight: 600;
 }
 
-/* ==========================================================================
-   3. 首页卡片 Crowther Lab 风格 (直角、高对比、无边框、精简排版)
-   ========================================================================== */
-.group.cursor-pointer, .card {
-  background-color: #ffffff !important;
-  border: 1px solid #f0f0f0 !important;
-  border-radius: 0 !important; /* 强制零圆角，硬朗风格 */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important; /* 极弱的阴影 */
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--iris-primary) !important;
 }
 
-.group.cursor-pointer:hover, .card:hover {
-  transform: translateY(-4px) !important;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06) !important;
+.wg-hero .hero-title,
+.wg-hero h1 {
+  color: var(--iris-heading) !important;
 }
 
-/* 顶部全宽图片 */
-.group.cursor-pointer img, .card img {
-  width: 100% !important;
-  height: 220px !important;
-  object-fit: cover !important;
-  border-radius: 0 !important; 
-  margin: 0 !important;
+.wg-hero .hero-lead,
+.wg-hero p {
+  color: var(--iris-text) !important;
 }
 
-/* 卡片内部文本留白 */
-.group.cursor-pointer > div:not(:first-child), .card-body {
-  padding: 24px 20px 24px 20px !important;
-  background: #ffffff !important;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.wg-hero .btn,
+.btn-primary {
+  border-radius: 10px !important;
+  box-shadow: none !important;
 }
 
-/* 标题：粗大、醒目 */
-.group.cursor-pointer h3, .card-title {
-  font-size: 1.15rem !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-  color: #222222 !important;
-  margin-top: 0 !important;
-  margin-bottom: 12px !important;
-}
-.group.cursor-pointer h3 a, .card-title a {
-  color: #222222 !important;
-  text-decoration: none !important;
-}
-.group.cursor-pointer h3 a:hover, .card-title a:hover {
-  color: #00468c !important;
+.btn-primary {
+  background: var(--iris-primary) !important;
+  border-color: var(--iris-primary) !important;
 }
 
-/* 摘要：削弱视觉层级，限制最多显示两行，或者根据需要可以直接 display: none 隐藏 */
-.group.cursor-pointer p, .card-text {
-  color: #666666 !important;
-  font-size: 0.9rem !important;
-  line-height: 1.5 !important;
-  margin-bottom: 16px !important;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--iris-primary-hover) !important;
+  border-color: var(--iris-primary-hover) !important;
 }
 
-/* 元数据 (日期等) 沉到底部左侧 */
-.article-metadata, .group.cursor-pointer .text-xs {
-  margin-top: auto !important; /* 利用 Flex 将日期推至底部 */
-  font-size: 0.85rem !important;
-  color: #888888 !important;
-  padding-top: 12px !important;
+.btn-outline-primary {
+  color: var(--iris-primary) !important;
+  border-color: var(--iris-primary) !important;
 }
 
-/* ==========================================================================
-   4. 列表页 RSIDEA 紧凑布局 (应用于论文区)
-   ========================================================================== */
-.media.stream-item {
-  display: flex !important;
-  align-items: flex-start !important;
-  background-color: #ffffff !important;
-  border: 1px solid #f0f0f0 !important;
-  border-radius: 0 !important; /* 零圆角 */
-  padding: 24px !important;
-  margin-bottom: 20px !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+.btn-outline-primary:hover {
+  color: #ffffff !important;
+  background: var(--iris-primary) !important;
 }
 
+.card,
+.group.cursor-pointer,
+.media.stream-item,
+.article-container .card-simple {
+  background: var(--iris-surface) !important;
+  border: 1px solid var(--iris-border) !important;
+  border-radius: var(--iris-radius) !important;
+  box-shadow: var(--iris-shadow-soft) !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover,
+.group.cursor-pointer:hover,
 .media.stream-item:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06) !important;
-  transform: translateY(-2px) !important;
+  transform: translateY(-3px);
+  box-shadow: var(--iris-shadow) !important;
 }
 
-.media.stream-item h3 {
-  margin-top: 0 !important;
+.card-body,
+.group.cursor-pointer > div:not(:first-child),
+.media.stream-item .media-body {
+  padding: 1.15rem 1.2rem !important;
 }
+
+.card-title,
+.group.cursor-pointer h3,
 .media.stream-item h3 a {
-  color: #222222 !important; 
+  color: var(--iris-heading) !important;
   font-weight: 700 !important;
-  font-size: 1.2rem !important;
+}
+
+.card-title a,
+.group.cursor-pointer h3 a {
+  color: var(--iris-heading) !important;
   text-decoration: none !important;
 }
+
+.card-title a:hover,
+.group.cursor-pointer h3 a:hover,
 .media.stream-item h3 a:hover {
-  color: #00468c !important; 
+  color: var(--iris-primary) !important;
 }
 
-.media.stream-item .media-body {
-  order: 2;
-  flex: 1;
-  padding-left: 24px;
+.card-text,
+.group.cursor-pointer p,
+.media.stream-item p {
+  color: var(--iris-muted) !important;
 }
-.media.stream-item a:not(.media-body a) {
-  order: 1;
-  flex-shrink: 0;
+
+.group.cursor-pointer img,
+.card img,
+.media.stream-item img {
+  border-radius: calc(var(--iris-radius) - 3px) !important;
+  object-fit: cover !important;
 }
+
+.media.stream-item {
+  gap: 1rem;
+  margin-bottom: 1.1rem !important;
+}
+
 .media.stream-item img {
   width: 240px !important;
-  height: 160px !important;
-  object-fit: cover !important;
-  border-radius: 0 !important;
+  height: 154px !important;
 }
 
-@media (max-width: 768px) {
-  .media.stream-item { 
-    flex-direction: column !important; 
-    align-items: stretch !important; 
-    padding: 16px !important;
-  }
-  .media.stream-item .media-body { 
-    padding-left: 0 !important; 
-    padding-top: 20px !important; 
-  }
-  .media.stream-item img { 
-    width: 100% !important; 
-    height: auto !important; 
-    aspect-ratio: 16/9;
-  }
+.section-heading h1 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.7rem;
 }
 
-/* ==========================================================================
-   5. 阻断无详情页论文的点击跳转 (Fail Fast)
-   ========================================================================== */
+.section-heading h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--iris-primary);
+}
+
+input,
+textarea,
+select,
+.form-control {
+  background: #ffffff !important;
+  border: 1px solid var(--iris-border) !important;
+  color: var(--iris-text) !important;
+  border-radius: 10px !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #8a99ad;
+}
+
+.site-footer,
+footer {
+  background: var(--iris-surface) !important;
+  border-top: 1px solid var(--iris-border) !important;
+}
+
 a[href$="#no-detail"] {
   pointer-events: none !important;
   cursor: default !important;
   color: inherit !important;
   text-decoration: none !important;
 }
-a[href$="#no-detail"] h3 {
-  color: #222222 !important;
-}
 
-/* 学术风模块标题底部装饰线 */
-.section-heading h1 {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 12px;
-  margin-bottom: 2rem;
-}
-.section-heading h1::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 48px;
-  height: 3px;
-  background-color: #00468c;
+@media (max-width: 991px) {
+  .home-section {
+    padding: 2.5rem 0 !important;
+  }
+
+  .navbar-brand img {
+    height: 40px !important;
+  }
+
+  .media.stream-item {
+    display: block !important;
+  }
+
+  .media.stream-item .media-body {
+    padding-left: 0 !important;
+    padding-top: 1rem !important;
+  }
+
+  .media.stream-item img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9;
+  }
 }
