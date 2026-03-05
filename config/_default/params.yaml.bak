@@ -4,7 +4,7 @@ hugoblox:
 
   appearance:
     mode: light
-    color_theme: default
+    color_theme: rsidea
     font: default
 
   identity:
