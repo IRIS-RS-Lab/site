@@ -4,7 +4,7 @@ hugoblox:
 
   appearance:
     mode: system
-    color_theme: blue
+    color_theme: minimal
     font: inter
 
   identity:

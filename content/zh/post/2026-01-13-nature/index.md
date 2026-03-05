@@ -11,6 +11,4 @@ tags: ["Announcement"]
 
 自2016年起，在国家重点研发计划课题等支持下，何国金研究团队研发共享了国际首套/唯一30米分辨率全球火烧迹地产品（1990-2024），该产品是目前空间分辨率最高的全球火烧迹地产品。研究成果在《ISPRS Journal of Photogrammetry and Remote Sensing》《Earth’s Future》《Geo-spatial Information Science》《Photogrammetric Engineering & Remote Sensing》《Remote Sensing》《Remote Sensing Letters》《遥感学报》等国内外期刊发表论文11篇，论文被《Nature》《Science》《PNAS》等顶级期刊引用，单篇论文最高引用达到287次。
 
-
-![用户界面](W020260113582931496576.jpg "用户界面演示")
-小尺度热带森林损失造成显著碳损失
+![小尺度热带森林损失造成显著碳损失](W020260113582931496576.jpg "小尺度热带森林损失造成显著碳损失")

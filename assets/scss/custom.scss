@@ -1,60 +1,67 @@
 /* =======================================================================
-   全局学术化排版重置 (Surgical UI Overrides)
-   强制干预 Tailwind 默认的 "大字号+大留白" 博客风渲染
+   ACADEMIC LAB UI SYSTEM (The "Zero-Noise" Standard)
    ======================================================================= */
 
-// 1. 强制重置根字号 (抑制全局的臃肿感)
-html {
-  font-size: 14px !important;
+:root {
+  --hb-primary: #1e3a8a; /* 学术深蓝 */
+  --hb-body-bg: #ffffff;
+  --hb-text: #1f2937;
 }
 
-// 2. 剥夺 Hero 区域的霸屏全屏高度
+// 1. 基础字号与字体密度
+body {
+  font-size: 15px !important;
+  color: var(--hb-text) !important;
+  background-color: var(--hb-body-bg) !important;
+  letter-spacing: -0.01em;
+}
+
+// 2. 移除所有阴影与厚重修饰
+.card, .section-card {
+  box-shadow: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 0 !important; /* 强制直角，符合学术严谨感 */
+  background: transparent !important;
+}
+
+// 3. Hero 区域：极度紧凑
 .wg-hero {
-  min-height: 0 !important;
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding: 4rem 0 !important;
+  text-align: left !important;
 }
 
-// 3. 压平所有巨大的标题 (H1-H3)
-h1, .text-4xl, .text-5xl, .text-6xl {
-  font-size: 2.2rem !important;
-  line-height: 1.3 !important;
+.hero-title {
+  font-size: 2.5rem !important;
   font-weight: 700 !important;
-  margin-bottom: 1rem !important;
+  color: #000 !important;
 }
 
-h2, .text-3xl {
-  font-size: 1.6rem !important;
-  margin-bottom: 0.8rem !important;
-}
-
-h3, .text-2xl {
-  font-size: 1.3rem !important;
-}
-
-// 4. Hero 副标题/描述瘦身与居中
 .hero-lead {
   font-size: 1.1rem !important;
-  line-height: 1.6 !important;
-  max-width: 800px;
-  margin: 0 auto !important;
-  opacity: 0.85;
+  color: #4b5563 !important;
+  margin-top: 1.5rem !important;
 }
 
-// 5. 抹平卡片的厚重感与阴影 (Flat Design)
-.card {
-  border: 1px solid rgba(128, 128, 128, 0.2) !important;
-  box-shadow: none !important;
-  border-radius: 6px !important;
-  background-color: transparent !important;
-}
-.card:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
-  border-color: rgba(128, 128, 128, 0.4) !important;
+// 4. 列表与按钮 (Compact View)
+.article-title {
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
 }
 
-// 6. 紧凑化所有 Section 间距 (默认 padding 太过夸张)
-section {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
+.btn {
+  border-radius: 2px !important; /* 方形按钮 */
+  padding: 0.5rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+// 5. Section 标题：克制与留白
+.section-heading {
+  font-size: 1.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #111 !important;
+  margin-bottom: 2rem !important;
+  border-bottom: 2px solid #000 !important;
+  display: inline-block;
+  padding-bottom: 0.25rem;
 }
