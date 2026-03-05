@@ -1,27 +1,18 @@
 /* =======================================================================
-   ACADEMIC LAB UI SYSTEM (The "Zero-Noise" Standard)
+   ACADEMIC UI SYSTEM (Cleaned: Layout Only)
+   仅负责：去圆角、去阴影、调间距。配色交还给主题。
    ======================================================================= */
 
-:root {
-  --hb-primary: #1e3a8a; /* 学术深蓝 */
-  --hb-body-bg: #ffffff;
-  --hb-text: #1f2937;
-}
-
-// 1. 基础字号与字体密度
-body {
+// 1. 基础字号
+html {
   font-size: 15px !important;
-  color: var(--hb-text) !important;
-  background-color: var(--hb-body-bg) !important;
-  letter-spacing: -0.01em;
 }
 
-// 2. 移除所有阴影与厚重修饰
-.card, .section-card {
+// 2. 强行抹除圆角与阴影 (Flat Design)
+.card, .section-card, .btn {
+  border-radius: 0 !important;
   box-shadow: none !important;
-  border: 1px solid #e5e7eb !important;
-  border-radius: 0 !important; /* 强制直角，符合学术严谨感 */
-  background: transparent !important;
+  border: 1px solid #d1d5db !important;
 }
 
 // 3. Hero 区域：极度紧凑
@@ -32,36 +23,22 @@ body {
 
 .hero-title {
   font-size: 2.5rem !important;
-  font-weight: 700 !important;
-  color: #000 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1rem !important;
 }
 
-.hero-lead {
-  font-size: 1.1rem !important;
-  color: #4b5563 !important;
-  margin-top: 1.5rem !important;
-}
-
-// 4. 列表与按钮 (Compact View)
+// 4. 列表紧凑化
 .article-title {
-  font-size: 1.1rem !important;
   font-weight: 500 !important;
 }
 
-.btn {
-  border-radius: 2px !important; /* 方形按钮 */
-  padding: 0.5rem 1rem !important;
-  font-size: 0.9rem !important;
-}
-
-// 5. Section 标题：克制与留白
+// 5. Section 标题
 .section-heading {
-  font-size: 1.8rem !important;
+  font-size: 1.6rem !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  color: #111 !important;
+  letter-spacing: 0.02em !important;
   margin-bottom: 2rem !important;
-  border-bottom: 2px solid #000 !important;
+  border-bottom: 1px solid #000 !important;
   display: inline-block;
   padding-bottom: 0.25rem;
 }
