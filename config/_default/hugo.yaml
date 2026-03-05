@@ -17,7 +17,7 @@ languages:
     languageName: "English"
     weight: 2
     contentDir: "content/en"
-    title: "IRIS | Intelligent Remote-sensing Information Systems & Applications"
+    title: "IRIS"
     params:
       description: "Intelligent Remote-sensing Information Systems & Applications (IRIS)"
 
