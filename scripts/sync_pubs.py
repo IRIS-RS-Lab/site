@@ -5,6 +5,7 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 try:
     import bibtexparser
@@ -55,8 +56,8 @@ def normalize_month(month: str) -> str:
         return month.zfill(2)
     return month_map.get(month.lower()[:3], "01")
 
-def normalize_badges(entry: dict) -> list[str]:
-    badges: list[str] = []
+def normalize_badges(entry: Dict[str, Any]) -> List[str]:
+    badges: List[str] = []
 
     for field in ("badges", "badge", "award", "awards", "special", "highlight"):
         raw = clean_bib_text(entry.get(field, ""))
@@ -81,7 +82,7 @@ def normalize_badges(entry: dict) -> list[str]:
         deduped.append(badge)
     return deduped
 
-def build_publication_record(entry: dict) -> dict | None:
+def build_publication_record(entry: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     citekey = clean_bib_text(entry.get("ID", ""))
     if not citekey:
         return None
@@ -111,7 +112,7 @@ def build_publication_record(entry: dict) -> dict | None:
         "badges": normalize_badges(entry),
     }
 
-def write_publication_data(entries: list[dict]):
+def write_publication_data(entries: List[Dict[str, Any]]):
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "source": str(BIB_FILE.relative_to(ROOT_DIR)).replace("\\", "/"),
@@ -123,7 +124,7 @@ def write_publication_data(entries: list[dict]):
         f.write("\n")
     print(f"[*] Wrote data: {DATA_FILE}")
 
-def generate_hugo_bundle(entry: dict, target_dir: Path, lang: str):
+def generate_hugo_bundle(entry: Dict[str, Any], target_dir: Path, lang: str):
     citekey = entry.get('ID')
     if not citekey:
         return
