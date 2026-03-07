@@ -3,7 +3,7 @@ title: "Quantifying Urban Cooling Benefits with SDGSAT-1 Nighttime Light and The
 date: 2025-10-01
 summary: "Published in The 46th Asian Conference on Remote Sensing 2025."
 authors: ["Ye, Long", "Long, Tengfei", "Jiao, Weili", "Adam, Elhadi"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

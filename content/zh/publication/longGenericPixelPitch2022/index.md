@@ -3,7 +3,7 @@ title: "A Generic Pixel Pitch Calibration Method for Fundus Camera via Automated
 date: 2022-11-01
 summary: "Published in Sensors."
 authors: ["Long, Tengfei", "Xu, Yi", "Zou, Haidong", "Lu, Lina", "Yuan, Tianyi", "Dong, Zhou", "Dong, Jiqun", "Ke, Xin", "Ling, Saiguang", "Ma, Yingyan"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Pixel pitch calibration is an essential step to make the fundus structures in th
 }
 ```
 -->
+

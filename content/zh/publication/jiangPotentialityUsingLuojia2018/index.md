@@ -3,7 +3,7 @@ title: "Potentiality of Using Luojia 1-01 Nighttime Light Imagery to Investigate
 date: 2018-09-01
 summary: "Published in Sensors."
 authors: ["Jiang, Wei", "He, Guojin", "Long, Tengfei", "Guo, Hongxiang", "Yin, Ranyu", "Leng, Wanchun", "Liu, Huichan", "Wang, Guizhou"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ The successful launch of Luojia 1-01 complements the existing nighttime light da
 }
 ```
 -->
+

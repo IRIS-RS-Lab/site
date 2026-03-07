@@ -3,7 +3,7 @@ title: "Monitoring Landsat Based Burned Area as an Indicator of Sustainable Deve
 date: 2021-06-01
 summary: "Published in Earth's Future."
 authors: ["Wei, Mingyue", "Zhang, Zhaoming", "Long, Tengfei", "He, Guojin", "Wang, Guizhou"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

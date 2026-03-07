@@ -3,7 +3,7 @@ title: "吴起县黄土高原退耕还林区时间序列正射产品"
 date: 2020-01-01
 summary: "Published in 中国科学数据(中英文网络版)."
 authors: ["龙, 腾飞", "何, 国金", "焦, 伟利"]
-tags:["", "Loess Plateau", "orthophoto", "returning farmland to forest", "time series", "Wuqi County"]
+tags: ["", "Loess Plateau", "orthophoto", "returning farmland to forest", "time series", "Wuqi County"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

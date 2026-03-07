@@ -3,7 +3,7 @@ title: "Estimation and Spatiotemporal Analysis of Actual Evapotranspiration over
 date: 2024-09-01
 summary: "Published in Journal of Hydrology."
 authors: ["Lin, Zirong", "Long, Tengfei", "Jiao, Weili", "Ye, Zhiqiang", "Zhang, Degang", "He, Guojin"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

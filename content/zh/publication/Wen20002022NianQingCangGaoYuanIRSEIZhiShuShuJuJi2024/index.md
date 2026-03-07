@@ -3,7 +3,7 @@ title: "2000--2022年青藏高原IRSEI指数数据集"
 date: 2024-10-01
 summary: "Published in 中国科学数据(中英文网络版)."
 authors: ["温, 春晖", "龙, 腾飞"]
-tags:["", "No DOI found"]
+tags: ["", "No DOI found"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

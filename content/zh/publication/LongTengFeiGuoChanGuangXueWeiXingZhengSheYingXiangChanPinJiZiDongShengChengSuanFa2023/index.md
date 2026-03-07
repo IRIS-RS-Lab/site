@@ -3,7 +3,7 @@ title: "国产光学卫星正射影像产品及自动生成算法"
 date: 2023-04-01
 summary: "Published in 遥感学报."
 authors: ["龙腾飞", "焦伟利", "何国金", "王桂周", "张兆明"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

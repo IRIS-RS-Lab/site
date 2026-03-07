@@ -3,7 +3,7 @@ title: "An Extension of Phase Correlation-Based Image Registration to Estimate S
 date: 2018-10-01
 summary: "Published in Remote Sensing."
 authors: ["Dong, Yunyun", "Jiao, Weili", "Long, Tengfei", "He, Guojin", "Gong, Chengjuan"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Image registration is a core technology of many different image processing areas
 }
 ```
 -->
+

@@ -3,7 +3,7 @@ title: "30 m Resolution Global Annual Burned Area Mapping Based on Landsat Image
 date: 2019-02-01
 summary: "Published in Remote Sensing."
 authors: ["Long, Tengfei", "Zhang, Zhaoming", "He, Guojin", "Jiao, Weili", "Tang, Chao", "Wu, Bingfang", "Zhang, Xiaomei", "Wang, Guizhou", "Yin, Ranyu"]
-tags:["global burned area", "Google Earth Engine", "Landsat", "temporal filtering", "time-series"]
+tags: ["global burned area", "Google Earth Engine", "Landsat", "temporal filtering", "time-series"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Heretofore, global Burned Area (BA) products have only been available at coarse 
 }
 ```
 -->
+

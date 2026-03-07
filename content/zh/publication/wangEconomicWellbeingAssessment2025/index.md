@@ -3,7 +3,7 @@ title: "Economic Well-Being Assessment: A Review of Traditional and Remote Sensi
 date: 2025-12-01
 summary: "Published in International Journal of Digital Earth."
 authors: ["Wang, Longfei", "Long, Tengfei", "Jiang, Wei", "Adam, Elhadi", "Wen, Chunhui", "Jiao, Weili", "He, Guojin"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ This paper reviews the evolution of economic well-being assessment, examining tr
 }
 ```
 -->
+

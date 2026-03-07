@@ -3,7 +3,7 @@ title: "Temporally Enhanced RSEI and Nighttime Lights Reveal Long-Term Ecologica
 date: 2025-01-01
 summary: "Published in Ecological Indicators."
 authors: ["Wen, Chunhui", "Long, Tengfei", "He, Guojin", "Jiao, Weili", "Jiang, Wei"]
-tags:["Driving factors", "Ecological environment quality", "Human impact", "Spatiotemporal dynamics"]
+tags: ["Driving factors", "Ecological environment quality", "Human impact", "Spatiotemporal dynamics"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Protected areas are vital for preserving biodiversity and ensuring ecosystem ser
 }
 ```
 -->
+

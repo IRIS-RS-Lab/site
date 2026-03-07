@@ -3,7 +3,7 @@ title: "A Hybrid Algorithm with Swin Transformer and Convolution for Cloud Detec
 date: 2023-01-01
 summary: "Published in Remote Sensing."
 authors: ["Gong, Chengjuan", "Long, Tengfei", "Yin, Ranyu", "Jiao, Weili", "Wang, Guizhou"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Cloud detection is critical in remote sensing image processing, and convolutiona
 }
 ```
 -->
+

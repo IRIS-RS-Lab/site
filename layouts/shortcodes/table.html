@@ -1,4 +1,4 @@
-{{/* Compatibility override for Hugo >= 0.150 where getCSV is unavailable. */}}
+{{/* Compatibility override for Hugo versions where getCSV is unavailable. */}}
 {{/* Load a CSV table from page dir, or from a remote URL. */}}
 
 {{ $src := .Get "path" }}
@@ -9,13 +9,8 @@
 {{ $rows := slice }}
 
 {{ if strings.HasPrefix $src "http" }}
-  {{ with try (resources.GetRemote $src) }}
-    {{ with .Err }}
-      {{ errorf "table shortcode: failed to fetch remote CSV %q: %s" $src . }}
-    {{ end }}
-    {{ with .Value }}
-      {{ $rows = . | transform.Unmarshal $opts }}
-    {{ end }}
+  {{ with resources.GetRemote $src }}
+    {{ $rows = . | transform.Unmarshal $opts }}
   {{ end }}
 {{ else }}
   {{ $local := path.Join "content" $.Page.File.Dir $src }}

@@ -3,7 +3,7 @@ title: "基于面特征的遥感图像几何校正模型"
 date: 2013-01-01
 summary: "Published in 测绘学报."
 authors: ["龙, 腾飞", "焦, 伟利", "王, 威"]
-tags:["", "areal feature", "distance", "geometric correction model", "remotely sensed images"]
+tags: ["", "areal feature", "distance", "geometric correction model", "remotely sensed images"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

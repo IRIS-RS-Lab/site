@@ -3,7 +3,7 @@ title: "Characterizing Light Pollution Trends across Protected Areas in China Us
 date: 2018-06-01
 summary: "Published in ISPRS International Journal of Geo-Information."
 authors: ["Jiang, Wei", "He, Guojin", "Leng, Wanchun", "Long, Tengfei", "Wang, Guizhou", "Liu, Huichan", "Peng, Yan", "Yin, Ranyu", "Guo, Hongxiang"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

@@ -3,7 +3,7 @@ title: "Study on Global Burned Forest Areas Based on Landsat Data"
 date: 2020-08-01
 summary: "Published in Photogrammetric Engineering & Remote Sensing."
 authors: ["Zhang, Zhaoming", "Long, Tengfei", "He, Guojin", "Wei, Mingyue", "Tang, Chao", "Wang, Wei", "Wang, Guizhou", "She, Wenqing", "Zhang, Xiaomei"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Forests are an extremely valuable natural resource for human development. Satell
 }
 ```
 -->
+

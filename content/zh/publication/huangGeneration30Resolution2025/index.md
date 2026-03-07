@@ -3,7 +3,7 @@ title: "Generation of 30 m Resolution Monthly Burned Area Product in Africa Base
 date: 2025-12-01
 summary: "Published in ISPRS Journal of Photogrammetry and Remote Sensing."
 authors: ["Huang, Shunguo", "Long, Tengfei", "Zhang, Zhaoming", "He, Guojin", "Wang, Guizhou"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

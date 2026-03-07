@@ -3,7 +3,7 @@ title: "Automatic Line Segment Registration Using Gaussian Mixture Model and Exp
 date: 2014-05-01
 summary: "Published in IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing."
 authors: ["Long, Tengfei", "Jiao, Weili", "He, Guojin", "Wang, Wei"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

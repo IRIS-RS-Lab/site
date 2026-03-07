@@ -3,7 +3,7 @@ title: "北京市典型居住区道路照明公众感知评价及模拟优化"
 date: 2023-01-01
 summary: "Published in 照明工程学报."
 authors: ["温, 春晖", "龙, 腾飞", "焦, 伟利", "林, 子镕", "刘, 永坤", "刘, 慧婵", "刘, 鸣", "何, 国金"]
-tags:["", "ambient illuminance", "comfort", "notion", "optimal design", "public lighting", "public perception", "safety"]
+tags: ["", "ambient illuminance", "comfort", "notion", "optimal design", "public lighting", "public perception", "safety"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

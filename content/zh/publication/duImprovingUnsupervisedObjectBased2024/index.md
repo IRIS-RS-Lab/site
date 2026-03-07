@@ -3,7 +3,7 @@ title: "Improving Unsupervised Object-Based Change Detection via Hierarchical Mu
 date: 2024-02-01
 summary: "Published in Remote Sensing."
 authors: ["Du, Yihong", "He, Xiaoming", "Chen, Liujia", "Wang, Duo", "Jiao, Weili", "Liu, Yongkun", "He, Guojin", "Long, Tengfei"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Change detection in remote sensing enables identifying alterations in surface ch
 }
 ```
 -->
+

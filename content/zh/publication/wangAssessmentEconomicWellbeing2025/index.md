@@ -3,7 +3,7 @@ title: "Assessment of Economic Well-Being in South Africa Based on Remote Sensin
 date: 2025-05-01
 summary: "Published in The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences."
 authors: ["Wang, Longfei", "Long, Tengfei", "Adam, Elhadi"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Abstract. Persistent socio-economic and environmental inequalities pose major ch
 }
 ```
 -->
+

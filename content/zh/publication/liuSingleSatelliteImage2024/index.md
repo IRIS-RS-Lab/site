@@ -3,7 +3,7 @@ title: "Single Satellite Image Sharpening With Any-Angle 2-D MTF Estimation"
 date: 2024-01-01
 summary: "Published in IEEE Transactions on Geoscience and Remote Sensing."
 authors: ["Liu, Yongkun", "Long, Tengfei", "Jiao, Weili", "Du, Yihong", "He, Guojin", "Zhang, Zhaoming", "Wang, Guizhou", "Peng, Yan"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

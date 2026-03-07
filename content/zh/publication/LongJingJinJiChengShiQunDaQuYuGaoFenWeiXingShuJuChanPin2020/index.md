@@ -3,7 +3,7 @@ title: "京津冀城市群大区域高分卫星数据产品"
 date: 2020-01-01
 summary: "Published in 中国科学数据(中英文网络版)."
 authors: ["龙, 腾飞", "何, 国金", "焦, 伟利", "王, 桂周"]
-tags:["", "Beijing-Tianjin-Hebei", "large area", "mosaic", "orthophoto", "Ready To Use"]
+tags: ["", "Beijing-Tianjin-Hebei", "large area", "mosaic", "orthophoto", "Ready To Use"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

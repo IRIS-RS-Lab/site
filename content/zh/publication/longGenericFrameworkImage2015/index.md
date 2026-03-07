@@ -3,7 +3,7 @@ title: "A Generic Framework for Image Rectification Using Multiple Types of Feat
 date: 2015-04-01
 summary: "Published in ISPRS Journal of Photogrammetry and Remote Sensing."
 authors: ["Long, Tengfei", "Jiao, Weili", "He, Guojin", "Zhang, Zhaoming", "Cheng, Bo", "Wang, Wei"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

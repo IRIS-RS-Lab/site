@@ -3,7 +3,7 @@ title: "Local Deep Descriptor for Remote Sensing Image Feature Matching"
 date: 2019-02-01
 summary: "Published in Remote Sensing."
 authors: ["Dong, Yunyun", "Jiao, Weili", "Long, Tengfei", "Liu, Lanfa", "He, Guojin", "Gong, Chengjuan", "Guo, Yantao"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ Feature matching via local descriptors is one of the most fundamental problems i
 }
 ```
 -->
+

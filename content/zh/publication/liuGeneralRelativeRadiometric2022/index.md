@@ -3,7 +3,7 @@ title: "A General Relative Radiometric Correction Method for Vignetting and Chro
 date: 2022-01-01
 summary: "Published in IEEE Transactions on Geoscience and Remote Sensing."
 authors: ["Liu, Yongkun", "Long, Tengfei", "Jiao, Weili", "He, Guojin", "Chen, Bo", "Huang, Peng"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

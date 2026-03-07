@@ -3,7 +3,7 @@ title: "RPC Estimation via L1-Norm-Regularized Least Squares (L1LS)"
 date: 2015-08-01
 summary: "Published in IEEE Transactions on Geoscience and Remote Sensing."
 authors: ["Long, Tengfei", "Jiao, Weili", "He, Guojin"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

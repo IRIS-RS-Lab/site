@@ -3,7 +3,7 @@ title: "A Novel Image Registration Method Based on Phase Correlation Using Low-R
 date: 2018-01-01
 summary: "Published in IEEE Transactions on Geoscience and Remote Sensing."
 authors: ["Dong, Yunyun", "Long, Tengfei", "Jiao, Weili", "He, Guojin", "Zhang, Zhaoming"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

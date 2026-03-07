@@ -3,7 +3,7 @@ title: "Automatic Segment-Wise Restoration for Wide Irregular Stripe Noise in SD
 date: 2023-12-01
 summary: "Published in The Egyptian Journal of Remote Sensing and Space Sciences."
 authors: ["Liu, Yongkun", "Long, Tengfei", "Jiao, Weili", "Du, Yihong", "He, Guojin", "Chen, Bo", "Huang, Peng"]
-tags:["notion"]
+tags: ["notion"]
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+

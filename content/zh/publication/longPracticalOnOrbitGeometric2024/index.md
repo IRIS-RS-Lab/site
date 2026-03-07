@@ -3,7 +3,7 @@ title: "Practical On-Orbit Geometric Recalibration of GF-1 WFV Images Based on R
 date: 2024-01-01
 summary: "Published in IEEE Geoscience and Remote Sensing Letters."
 authors: ["Long, Tengfei", "Jiao, Weili", "He, Guojin", "Zhang, Zhaoming", "Wang, Guizhou"]
-tags:[]
+tags: []
 featured: false
 # 🔴 核心机制：此行代码会让这篇论文在列表中不可点击。若要为其添加详细页面，请删除这行代码！
 external_link: "#no-detail"
@@ -38,3 +38,4 @@ links:
 }
 ```
 -->
+
