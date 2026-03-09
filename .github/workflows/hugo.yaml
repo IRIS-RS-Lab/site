@@ -4,6 +4,8 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"
 
 permissions:
   contents: read
@@ -33,12 +35,23 @@ jobs:
         with:
           go-version: '1.22'
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install bibtexparser
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           # 【绝对禁止修改此版本号】HugoBlox v5 强依赖 0.128.2
           hugo-version: '0.128.2'
           extended: true
+
+      - name: Sync publication data from publications.bib
+        run: python scripts/sync_pubs.py --skip-bundles
 
       - name: Build with Hugo
         env:

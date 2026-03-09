@@ -1,0 +1,89 @@
+{{ $item := .item }}
+{{ $blockID := .block_id | default "" }}
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+
+{{ $lang := site.Language.Lang | default "zh" }}
+{{ $projectData := index site.Data.projects $lang | default dict }}
+{{ $entries := $projectData.entries | default (slice) }}
+{{ $matchedEntry := dict }}
+{{ range $entries }}
+  {{ $entryPage := .page | default "" }}
+  {{ if and (not $matchedEntry) $entryPage }}
+    {{ $normalizedEntryPage := replaceRE (printf "^/%s/" $lang) "/" $entryPage }}
+    {{ $normalizedItemLink := replaceRE (printf "^/%s/" $lang) "/" $item.RelPermalink }}
+    {{ if or (eq $entryPage $item.RelPermalink) (eq $normalizedEntryPage $normalizedItemLink) }}
+      {{ $matchedEntry = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $period := "" }}
+{{ with index $matchedEntry "start" }}{{ $period = . }}{{ end }}
+{{ with index $matchedEntry "end" }}
+  {{ if $period }}
+    {{ $period = printf "%s - %s" $period . }}
+  {{ else }}
+    {{ $period = . }}
+  {{ end }}
+{{ end }}
+{{ if not $period }}
+  {{ $period = time.Format ":date_medium" $item.Date }}
+{{ end }}
+
+{{ $cardAbstract := "" }}
+{{ with $item.Params.summary }}
+  {{ $cardAbstract = . | markdownify | emojify }}
+{{ end }}
+
+{{ $resource := "" }}
+{{ with $item.Params.image }}
+  {{ with .filename }}
+    {{ $resource = $item.Resources.GetMatch . }}
+  {{ end }}
+{{ end }}
+{{ if not $resource }}
+  {{ $resource = $item.Resources.GetMatch "featured*" }}
+{{ end }}
+{{ if not $resource }}
+  {{ $resource = $item.Resources.GetMatch "cover*" }}
+{{ end }}
+{{ if not $resource }}
+  {{ $resource = $item.Resources.GetMatch "*.{png,jpg,jpeg,webp,avif}" }}
+{{ end }}
+
+<div class="card-simple view-card iris-project-card">
+  <div class="article-metadata iris-project-card-meta">
+    <span class="article-date">{{ $period }}</span>
+  </div>
+
+  <div class="section-subheading article-title mb-1 mt-3">
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+  </div>
+
+  {{ with $cardAbstract }}
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="summary-link">
+      <div class="article-style article-abstract">
+        <p>{{ . }}</p>
+      </div>
+    </a>
+  {{ end }}
+
+  {{ with $resource }}
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
+      <div class="img-hover-zoom iris-project-card-image-wrap">
+        <img
+          src="{{ .RelPermalink }}"
+          height="{{ .Height }}"
+          width="{{ .Width }}"
+          class="article-banner"
+          alt="{{ $item.Title }}"
+          loading="lazy">
+      </div>
+    </a>
+  {{ end }}
+</div>

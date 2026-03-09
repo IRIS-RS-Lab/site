@@ -1,5 +1,6 @@
 ---
-title: 重点项目
+title: ''
+linkTitle: 精选项目
 weight: 20
 type: landing
 sections:
@@ -11,10 +12,10 @@ sections:
   - block: collection
     id: projects_featured
     content:
-      title: 重点项目列表
+      # title: 精选项目
       subtitle: ''
-      text: |
-        可作为首页精选项目的来源。
+      # text: |
+      #   可作为首页精选项目的来源。
       count: 0
       filters:
         folders:

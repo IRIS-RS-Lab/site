@@ -38,4 +38,3 @@ Cloud detection is critical in remote sensing image processing, and convolutiona
 }
 ```
 -->
-

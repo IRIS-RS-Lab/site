@@ -1,36 +1,32 @@
 main:
-  - name: "Home"
-    url: "en/"
-    weight: 10
-
   - name: "Research"
     url: "en/research/cv/"
-    weight: 20
+    weight: 10
 
   - name: "Publications"
     url: "/en/publication/"
-    weight: 30
+    weight: 20
 
   - name: "Projects"
     url: "/en/project/"
-    weight: 40
+    weight: 30
 
   - name: "Resources"
     url: "/en/resources/datasets/"
-    weight: 50
+    weight: 40
 
   - name: "News"
     url: "/en/post/"
-    weight: 60
+    weight: 50
 
   - name: "Impact"
     url: "/en/impact/awards/"
-    weight: 70
+    weight: 60
 
   - name: "People"
     url: "/en/people/"
-    weight: 80
+    weight: 70
 
   - name: "Join"
     url: "/en/join/"
-    weight: 90
+    weight: 80

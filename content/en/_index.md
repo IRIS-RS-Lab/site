@@ -49,6 +49,7 @@ sections:
       filters:
         folders:
           - project
+        featured_only: true
       sort_by: "Date"
       sort_ascending: false
     design:
@@ -69,6 +70,6 @@ sections:
     content:
       title: Contact
       text: |
-        - Email: `contact@iris-lab.org`
-        - Location: `XXX University / XXX Lab`
+        - Email: `longtf@aircas.ac.cn`
+        - Location: `北京市海淀区邓庄南路9号 100094`
 ---

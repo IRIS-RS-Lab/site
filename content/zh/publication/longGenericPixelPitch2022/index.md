@@ -38,4 +38,3 @@ Pixel pitch calibration is an essential step to make the fundus structures in th
 }
 ```
 -->
-

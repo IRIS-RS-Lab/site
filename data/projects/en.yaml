@@ -1,0 +1,21 @@
+entries:
+  - title: "IRIS Benchmark (Example Project)"
+    category: "Benchmark and Platform"
+    start: "2026-01"
+    end: "2027-12"
+    funding: "Example: CNY 3.0M"
+    members:
+      - "Guojin He"
+      - "Tengfei Long"
+      - "Zhaoming Zhang"
+    role: "Project Lead"
+    page: "/en/project/iris-benchmark/"
+  - title: "Urban Heat Remote Sensing Platform (Example)"
+    category: "Application Demo"
+    start: "2025-06"
+    end: "2026-12"
+    funding: "Example: CNY 1.2M"
+    members:
+      - "Tengfei Long"
+      - "Zhaoming Zhang"
+    role: "Technical Lead"

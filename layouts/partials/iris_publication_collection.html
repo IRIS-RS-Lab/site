@@ -67,7 +67,7 @@
 {{ if eq $sortBy "title" }}
   {{ $filtered = sort $filtered "title" $sortOrder }}
 {{ else }}
-  {{ $filtered = sort $filtered "date" $sortOrder }}
+  {{ $filtered = sort $filtered "sort_date" $sortOrder }}
 {{ end }}
 
 {{ $count := len $filtered }}

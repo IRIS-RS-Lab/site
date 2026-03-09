@@ -23,7 +23,8 @@
     {{- if gt (len $children) 0 -}}
       {{- $items := slice -}}
       {{- range $children -}}
-        {{- $items = $items | append (dict "title" .Title "url" .RelPermalink) -}}
+        {{- $itemTitle := .LinkTitle | default .Title -}}
+        {{- $items = $items | append (dict "title" $itemTitle "url" .RelPermalink) -}}
       {{- end -}}
       {{- $firstURL := index (index $items 0) "url" -}}
       {{- $navConfigs = $navConfigs | append (dict
@@ -310,6 +311,7 @@
       const back = document.createElement('a');
       back.href = listLink.href;
       back.textContent = document.documentElement.lang === 'zh' ? listLink.labelZh : listLink.labelEn;
+      back.className = 'iris-article-nav-back';
       nav.appendChild(back);
     }
 

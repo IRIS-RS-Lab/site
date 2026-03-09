@@ -6,13 +6,23 @@
   {{ $titleLink = $detail.RelPermalink }}
 {{ end }}
 
-{{ $dateText := $entry.date | default "" }}
-{{ with $entry.date }}
-  {{ $pubTime := time.AsTime . }}
+{{ $dateText := "" }}
+{{ $yearText := $entry.year | default "" }}
+{{ $monthText := $entry.month | default "" }}
+{{ if and $yearText $monthText }}
+  {{ with $entry.date }}
+    {{ $pubTime := time.AsTime . }}
+    {{ if eq site.Language.Lang "zh" }}
+      {{ $dateText = $pubTime.Format "2006年1月" }}
+    {{ else }}
+      {{ $dateText = $pubTime.Format "Jan 2006" }}
+    {{ end }}
+  {{ end }}
+{{ else if $yearText }}
   {{ if eq site.Language.Lang "zh" }}
-    {{ $dateText = $pubTime.Format "2006年1月" }}
+    {{ $dateText = printf "%s年" $yearText }}
   {{ else }}
-    {{ $dateText = $pubTime.Format "Jan 2006" }}
+    {{ $dateText = $yearText }}
   {{ end }}
 {{ end }}
 

@@ -30,7 +30,8 @@
 <div class="iris-float-nav" data-auto-nav="shortcode">
   <h3>{{ $heading }}</h3>
   {{- range $items -}}
-    <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $page.RelPermalink }}active{{ end }}">{{ .Title }}</a>
+    {{- $itemTitle := .LinkTitle | default .Title -}}
+    <a href="{{ .RelPermalink }}" class="{{ if eq .RelPermalink $page.RelPermalink }}active{{ end }}">{{ $itemTitle }}</a>
   {{- end -}}
 </div>
   {{- end -}}

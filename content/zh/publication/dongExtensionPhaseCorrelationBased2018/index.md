@@ -38,4 +38,3 @@ Image registration is a core technology of many different image processing areas
 }
 ```
 -->
-

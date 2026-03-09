@@ -5,7 +5,9 @@ role: "Principal Investigator"
 people_group: "学术指导"
 # Lower values appear earlier within the same people_group.
 people_weight: 10
-# Avatar image (optional): place avatar.jpg in this folder
+# Avatar usage:
+# 1) Place avatar.jpg in this folder and delete the avatar block below, or
+# 2) use avatar.url: "avatar.jpg" / "/uploads/avatar.jpg" / "https://..."
 # avatar:
 #   url: "https://people.ucas.ac.cn/self/img/ff0bcca7-ec30-420e-8da1-922c3ce59284.jpg"
 # Optional profile links:

@@ -76,17 +76,37 @@
               {{ $avatarURL := "" }}
               {{ if $avatarParam }}
                 {{ if reflect.IsMap $avatarParam }}
-                  {{ $avatarURL = $avatarParam.url | default "" }}
-                  {{ if and (not $avatarURL) ($avatarParam.filename) }}
+                  {{ $avatarValue := $avatarParam.url | default "" }}
+                  {{ if and (not $avatarValue) ($avatarParam.filename) }}
                     {{ $avatarFilename := printf "%v" $avatarParam.filename }}
-                    {{ if or (hasPrefix $avatarFilename "http://") (hasPrefix $avatarFilename "https://") }}
-                      {{ $avatarURL = $avatarFilename }}
+                    {{ $avatarValue = $avatarFilename }}
+                  {{ end }}
+                  {{ if $avatarValue }}
+                    {{ $avatarValue = printf "%v" $avatarValue }}
+                    {{ if or (hasPrefix $avatarValue "http://") (hasPrefix $avatarValue "https://") }}
+                      {{ $avatarURL = $avatarValue }}
+                    {{ else if hasPrefix $avatarValue "/" }}
+                      {{ $avatarURL = $avatarValue | relURL }}
+                    {{ else }}
+                      {{ with $person.Resources.GetMatch $avatarValue }}
+                        {{ $avatarURL = .RelPermalink }}
+                      {{ else }}
+                        {{ $avatarURL = $avatarValue | relURL }}
+                      {{ end }}
                     {{ end }}
                   {{ end }}
                 {{ else }}
                   {{ $avatarValue := printf "%v" $avatarParam }}
                   {{ if or (hasPrefix $avatarValue "http://") (hasPrefix $avatarValue "https://") }}
                     {{ $avatarURL = $avatarValue }}
+                  {{ else if hasPrefix $avatarValue "/" }}
+                    {{ $avatarURL = $avatarValue | relURL }}
+                  {{ else }}
+                    {{ with $person.Resources.GetMatch $avatarValue }}
+                      {{ $avatarURL = .RelPermalink }}
+                    {{ else }}
+                      {{ $avatarURL = $avatarValue | relURL }}
+                    {{ end }}
                   {{ end }}
                 {{ end }}
               {{ end }}
@@ -102,23 +122,23 @@
                 {{ $nameURL = $person.RelPermalink }}
               {{ end }}
               <article class="iris-people-card" id="{{ $personID }}">
-                <div class="iris-people-photo">
-                  {{ if $avatarURL }}
-                    <img src="{{ $avatarURL }}" alt="{{ $personName }}">
-                  {{ else }}
-                    {{ with $avatar }}
-                      <img src="{{ .RelPermalink }}" alt="{{ $personName }}">
-                    {{ else }}
-                      <div class="iris-people-photo-placeholder">{{ substr ($personName | plainify) 0 1 }}</div>
-                    {{ end }}
-                  {{ end }}
-                </div>
                 <div class="iris-people-body">
                   <div class="iris-people-name">
                     {{ if $nameURL }}
                       <a href="{{ $nameURL }}"{{ if $profileURL }} target="_blank" rel="noopener"{{ end }}>{{ $personName }}</a>
                     {{ else }}
                       <span class="iris-people-name-text">{{ $personName }}</span>
+                    {{ end }}
+                  </div>
+                  <div class="iris-people-photo">
+                    {{ if $avatarURL }}
+                      <img src="{{ $avatarURL }}" alt="{{ $personName }}">
+                    {{ else }}
+                      {{ with $avatar }}
+                        <img src="{{ .RelPermalink }}" alt="{{ $personName }}">
+                      {{ else }}
+                        <div class="iris-people-photo-placeholder">{{ substr ($personName | plainify) 0 1 }}</div>
+                      {{ end }}
                     {{ end }}
                   </div>
                   <div class="iris-people-bio">

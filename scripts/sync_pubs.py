@@ -56,6 +56,35 @@ def normalize_month(month: str) -> str:
         return month.zfill(2)
     return month_map.get(month.lower()[:3], "01")
 
+def extract_year(entry: Dict[str, Any]) -> str:
+    for field in ("year", "date", "issued"):
+        raw = clean_bib_text(entry.get(field, ""))
+        if not raw:
+            continue
+        match = re.search(r"(19|20)\d{2}", raw)
+        if match:
+            return match.group(0)
+
+    citekey = clean_bib_text(entry.get("ID", ""))
+    citekey_match = re.search(r"((?:19|20)\d{2})$", citekey)
+    if citekey_match:
+        return citekey_match.group(1)
+
+    return ""
+
+def extract_month(entry: Dict[str, Any]) -> str:
+    raw_month = clean_bib_text(entry.get("month", ""))
+    if raw_month:
+        return normalize_month(raw_month)
+
+    raw_date = clean_bib_text(entry.get("date", ""))
+    if raw_date:
+        match = re.search(r"(19|20)\d{2}-(\d{1,2})", raw_date)
+        if match:
+            return match.group(2).zfill(2)
+
+    return ""
+
 def normalize_badges(entry: Dict[str, Any]) -> List[str]:
     badges: List[str] = []
 
@@ -89,9 +118,13 @@ def build_publication_record(entry: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 
     title = clean_bib_text(entry.get("title", "Untitled"))
     authors = [clean_bib_text(a) for a in entry.get("author", "").split(" and ") if a.strip()]
-    year = clean_bib_text(entry.get("year", "2000"))
-    month_num = normalize_month(entry.get("month", "01"))
-    date_str = f"{year}-{month_num}-01"
+    year = extract_year(entry)
+    month_num = extract_month(entry)
+    date_str = ""
+    sort_date = "0001-01-01"
+    if year:
+        date_str = f"{year}-{month_num or '01'}-01"
+        sort_date = date_str
     venue = clean_bib_text(entry.get("journal", entry.get("booktitle", "")))
     keywords = [clean_bib_text(t) for t in entry.get("keywords", "").split(",") if t.strip()]
 
@@ -103,6 +136,7 @@ def build_publication_record(entry: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         "authors_text": ", ".join(authors),
         "venue": venue,
         "date": date_str,
+        "sort_date": sort_date,
         "year": year,
         "month": month_num,
         "abstract": clean_bib_text(entry.get("abstract", "")),
@@ -117,7 +151,7 @@ def write_publication_data(entries: List[Dict[str, Any]]):
     payload = {
         "source": str(BIB_FILE.relative_to(ROOT_DIR)).replace("\\", "/"),
         "updated_at": datetime.now().isoformat(timespec="seconds"),
-        "entries": sorted(entries, key=lambda item: item["date"], reverse=True),
+        "entries": sorted(entries, key=lambda item: item.get("sort_date", ""), reverse=True),
     }
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)

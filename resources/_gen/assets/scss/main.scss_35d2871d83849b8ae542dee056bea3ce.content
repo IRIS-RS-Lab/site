@@ -9752,6 +9752,15 @@ div.chart {
 html {
   font-size: 15px; }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; }
+
+button,
+input,
+select,
+textarea {
+  font: inherit; }
+
 html,
 body,
 .hb-page-wrapper,
@@ -9850,10 +9859,15 @@ a:focus {
   object-fit: contain;
   mix-blend-mode: multiply !important; }
 
+.navbar-nav {
+  gap: 0.72rem; }
+
 .navbar-nav .nav-link {
   color: var(--iris-text) !important;
   font-weight: 600;
-  font-size: 0.98rem; }
+  font-size: 0.98rem;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important; }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
@@ -10091,6 +10105,144 @@ a:focus {
 #pubs_featured .iris-publication-item .media-body {
   padding: 0 !important; }
 
+/* YAML-driven project list */
+#projects_all .iris-project-table-wrap {
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid var(--iris-border);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(16, 35, 68, 0.04); }
+
+#projects_all .iris-project-table {
+  width: 100%;
+  min-width: 760px;
+  margin: 0;
+  border-collapse: collapse;
+  background: #ffffff; }
+
+#projects_all .iris-project-table th,
+#projects_all .iris-project-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--iris-border);
+  vertical-align: top;
+  text-align: left; }
+
+#projects_all .iris-project-table thead th {
+  background: #f5f8fc;
+  color: var(--iris-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap; }
+
+#projects_all .iris-project-table tbody td {
+  color: #46566b;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  background: #ffffff !important; }
+
+#projects_all .iris-project-table tbody tr {
+  background: #ffffff !important; }
+
+#projects_all .iris-project-table tbody tr:nth-child(odd) td,
+#projects_all .iris-project-table tbody tr:nth-child(even) td,
+#projects_all .iris-project-table tbody tr:hover td {
+  background: #ffffff !important; }
+
+#projects_all .iris-project-table tbody tr:last-child td {
+  border-bottom: 0; }
+
+#projects_all .iris-project-table-title {
+  color: var(--iris-heading);
+  font-weight: 700; }
+
+#projects_all .iris-project-table-link {
+  color: var(--iris-primary);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease; }
+
+#projects_all .iris-project-table-link:hover {
+  color: #0d4f94;
+  text-decoration-color: currentColor; }
+
+#projects_all .iris-project-list-empty {
+  padding: 1rem 1.15rem;
+  background: #ffffff;
+  border: 1px dashed var(--iris-border);
+  border-radius: 12px;
+  color: #607087; }
+
+.iris-project-card {
+  display: flex;
+  flex-direction: column;
+  height: auto !important;
+  align-self: start;
+  margin: 0 !important;
+  background: #ffffff !important;
+  border: 1px solid #e3e8ef !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: hidden; }
+
+.iris-project-card .iris-project-card-meta {
+  order: 0 !important;
+  margin-top: 0 !important;
+  padding: 0.95rem 0.9rem 0;
+  color: #5f6f83 !important;
+  font-size: 0.88rem !important; }
+
+.iris-project-card .article-date {
+  color: #4f6074 !important;
+  font-weight: 500; }
+
+.iris-project-card .article-title {
+  order: 1;
+  margin: 0 !important;
+  padding: 0.15rem 0.9rem 0.2rem;
+  font-size: 1.26rem !important;
+  line-height: 1.32 !important; }
+
+.iris-project-card .article-title a {
+  color: #243246 !important;
+  font-weight: 800 !important;
+  text-decoration: none !important; }
+
+.iris-project-card .summary-link {
+  order: 2;
+  display: block;
+  padding: 0 0.85rem 0.55rem; }
+
+.iris-project-card .article-style,
+.iris-project-card .article-abstract,
+.iris-project-card .article-style p,
+.iris-project-card .article-abstract p {
+  margin: 0 !important;
+  color: #4a586c !important;
+  font-size: 0.92rem !important;
+  line-height: 1.55 !important; }
+
+.iris-project-card > a:not(.summary-link) {
+  display: block;
+  order: 3; }
+
+.iris-project-card .iris-project-card-image-wrap {
+  background: #ffffff !important;
+  text-align: center;
+  padding: 0 0.9rem 0.9rem; }
+
+.iris-project-card .article-banner {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  border-radius: 0 !important;
+  display: block;
+  margin: 0 auto; }
+
 #all_pubs .iris-publication-item .iris-publication-citekey,
 #pubs_all .iris-publication-item .iris-publication-citekey,
 #pubs_featured .iris-publication-item .iris-publication-citekey {
@@ -10227,13 +10379,15 @@ a:focus {
 .iris-people-group + .iris-people-group {
   margin-top: 1.6rem; }
 
-.iris-people-card {
+.iris-people-group {
   display: grid;
-  grid-template-columns: 212px minmax(0, 1fr);
-  gap: 1rem;
-  align-items: stretch;
-  margin: 0 0 1rem !important;
-  padding: 0.8rem;
+  grid-template-columns: 1fr;
+  gap: 1rem; }
+
+.iris-people-card {
+  display: block;
+  margin: 0 !important;
+  padding: 0.85rem 0.95rem;
   background: #ffffff !important;
   border: 1px solid var(--iris-border) !important;
   border-radius: 12px !important;
@@ -10241,20 +10395,18 @@ a:focus {
   scroll-margin-top: 96px; }
 
 .iris-people-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 250px;
-  padding: 0.55rem;
+  float: left;
+  width: 132px;
+  margin: 0.08rem 0.95rem 0.55rem 0;
+  padding: 0.4rem;
   background: #f5f8fc;
   border-radius: 10px;
   overflow: hidden; }
 
 .iris-people-photo img {
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
+  margin: 0 auto;
   object-fit: contain !important;
   display: block; }
 
@@ -10263,18 +10415,23 @@ a:focus {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  min-height: 166px;
   color: var(--iris-primary);
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.04em; }
 
 .iris-people-body {
   min-width: 0; }
 
+.iris-people-body::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 .iris-people-name {
-  margin-bottom: 0.2rem;
-  font-size: 1.12rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.28; }
 
@@ -10290,8 +10447,8 @@ a:focus {
 .iris-people-bio p,
 .iris-people-bio li {
   color: var(--iris-text) !important;
-  font-size: 0.94rem !important;
-  line-height: 1.72; }
+  font-size: 0.9rem !important;
+  line-height: 1.7; }
 
 .iris-people-bio > *:first-child {
   margin-top: 0; }
@@ -10397,6 +10554,45 @@ body.iris-has-left-nav .iris-nav-only-section > .container > .row > [class*="col
     max-height: calc(100vh - var(--iris-fixed-nav-top) - 14px);
     overflow: auto;
     z-index: 36; }
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav {
+    border: 1px solid var(--iris-border);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(16, 35, 68, 0.05);
+    overflow: hidden; }
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav h3 {
+    margin: 0;
+    padding: 0.72rem 0.9rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff !important;
+    background: #31465c; }
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a,
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a:visited {
+    display: block;
+    padding: 0.58rem 0.9rem;
+    color: #233247 !important;
+    border-top: 1px solid var(--iris-border);
+    text-decoration: none !important;
+    line-height: 1.45;
+    font-size: 0.93rem;
+    font-weight: 500;
+    background: #ffffff;
+    opacity: 1 !important; }
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a.sub,
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a.sub:visited {
+    padding-left: 1.32rem;
+    color: #40556f !important;
+    font-size: 0.88rem; }
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a.iris-article-nav-back,
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a.iris-article-nav-back:visited {
+    color: var(--iris-primary) !important;
+    font-weight: 700;
+    background: #f7fbff; }
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a:hover,
+  body.iris-has-left-nav .iris-global-left-nav.iris-article-nav a:focus {
+    background: #eef4fb;
+    color: var(--iris-primary) !important; }
   body.iris-has-left-nav .page-body .container,
   body.iris-has-left-nav .article-container,
   body.iris-has-left-nav .universal-wrapper {
@@ -10458,39 +10654,89 @@ main .universal-wrapper .article-style::after {
   width: 220px;
   margin: 0.15rem 1.35rem 0.9rem 0;
   border: 1px solid var(--iris-border);
-  background: #f2f5f9;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(16, 35, 68, 0.05);
   position: sticky;
   top: 96px;
-  z-index: 5; }
+  z-index: 5;
+  overflow: hidden; }
 
 .article.iris-has-outline .iris-article-nav h3 {
   margin: 0;
-  padding: 0.64rem 0.82rem;
+  padding: 0.72rem 0.9rem;
   font-size: 1rem;
+  font-weight: 800;
   color: #ffffff !important;
-  background: #334455; }
+  background: #31465c; }
 
 .article.iris-has-outline .iris-article-nav a {
   display: block;
-  padding: 0.48rem 0.82rem;
-  color: #2b3a4f !important;
+  padding: 0.58rem 0.9rem;
+  color: #233247 !important;
   border-top: 1px solid var(--iris-border);
   text-decoration: none !important;
-  line-height: 1.35;
-  font-size: 0.92rem; }
+  line-height: 1.45;
+  font-size: 0.93rem;
+  font-weight: 500;
+  background: #ffffff; }
 
 .article.iris-has-outline .iris-article-nav a.sub {
-  padding-left: 1.2rem;
-  color: #41536a !important;
+  padding-left: 1.32rem;
+  color: #40556f !important;
   font-size: 0.88rem; }
 
+.article.iris-has-outline .iris-article-nav a.iris-article-nav-back {
+  color: var(--iris-primary) !important;
+  font-weight: 700;
+  background: #f7fbff; }
+
 .article.iris-has-outline .iris-article-nav a:hover {
-  background: #e8eef6;
+  background: #eef4fb;
   color: var(--iris-primary) !important; }
 
 .article.iris-has-outline .article-style {
   margin-left: 240px;
   max-width: 760px; }
+
+.article .article-style a,
+.article .article-style a:visited {
+  color: var(--iris-primary) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.14em; }
+
+.article .article-style a:hover,
+.article .article-style a:focus {
+  color: var(--iris-primary-hover) !important; }
+
+.article .article-style code {
+  padding: 0.08rem 0.3rem;
+  background: #eef4fb;
+  border-radius: 4px;
+  color: #1f3350 !important;
+  font-size: 0.92em; }
+
+.article .article-style pre {
+  padding: 1rem 1.1rem;
+  background: #f6f9fc !important;
+  border: 1px solid var(--iris-border);
+  border-radius: 10px;
+  color: #243246 !important;
+  overflow-x: auto; }
+
+.article .article-style pre code {
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  color: #243246 !important;
+  font-size: 0.95em;
+  white-space: pre; }
+
+.article .article-style blockquote {
+  border-left: 4px solid var(--iris-primary);
+  background: #f8fbff;
+  color: #31465c !important; }
 
 html[lang="zh"] .article .article-style > p {
   text-indent: 2em;
@@ -10557,6 +10803,22 @@ html[lang="zh"] .article .article-style > p:has(> a > img) {
   object-fit: cover !important;
   border-radius: 0 !important;
   display: block; }
+
+#projects .iris-project-card .iris-project-card-image-wrap,
+html.iris-home-page #projects .iris-project-card .iris-project-card-image-wrap {
+  background: #ffffff !important;
+  text-align: center;
+  padding: 0 0.9rem 0.9rem; }
+
+#projects .iris-project-card .article-banner,
+html.iris-home-page #projects .iris-project-card .article-banner {
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto; }
 
 #posts_all .card-simple .article-banner,
 #posts_announcements .card-simple .article-banner {
@@ -10970,6 +11232,10 @@ footer {
   background: var(--iris-surface) !important;
   border-top: 1px solid var(--iris-border) !important; }
 
+.share-box,
+.share {
+  display: none !important; }
+
 a[href$="#no-detail"] {
   pointer-events: none !important;
   cursor: default !important;
@@ -10986,6 +11252,11 @@ article .article-header.featured-image-wrapper {
     padding: 1.9rem 0 !important; }
   .navbar-brand img {
     height: 40px !important; }
+  .navbar-nav {
+    gap: 0.1rem; }
+  .navbar-nav .nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important; }
   .media.stream-item {
     display: block !important; }
   .media.stream-item .media-body {
@@ -11004,12 +11275,16 @@ article .article-header.featured-image-wrapper {
     grid-template-columns: 1fr; }
   .iris-people-sidebar {
     position: static; }
+  .iris-people-group {
+    grid-template-columns: 1fr; }
   .iris-people-card {
-    grid-template-columns: 1fr;
-    padding: 0.9rem;
+    padding: 0.8rem 0.85rem;
     border-radius: 10px !important; }
   .iris-people-photo {
-    min-height: 220px; }
+    width: 118px;
+    margin-right: 0.8rem; }
+  .iris-people-photo-placeholder {
+    min-height: 118px; }
   .iris-float-nav {
     float: none;
     width: 100%;

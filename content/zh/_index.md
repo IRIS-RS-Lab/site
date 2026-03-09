@@ -41,6 +41,7 @@ sections:
       filters:
         folders:
           - project
+        featured_only: true
       sort_by: "Date"
       sort_ascending: false
     design:
@@ -61,6 +62,6 @@ sections:
     content:
       title: 联系我们
       text: |
-        - 邮箱：`contact@iris-lab.org`
-        - 位置：`XXX University / XXX Lab`
+        - 邮箱：`longtf@aircas.ac.cn`
+        - 位置：`北京市海淀区邓庄南路9号`
 ---

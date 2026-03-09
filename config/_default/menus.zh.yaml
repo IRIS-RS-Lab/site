@@ -1,36 +1,32 @@
 main:
-  - name: "首页"
-    url: "zh/"
-    weight: 10
-
   - name: "研究成员"
     url: "/zh/people/all/"
-    weight: 20
+    weight: 10
 
   - name: "研究方向"
     url: "/zh/research/rtu/"
-    weight: 30
+    weight: 20
 
   - name: "论文著作"
     url: "/zh/publication/paper/"
-    weight: 40
+    weight: 30
 
   - name: "科研项目"
     url: "/zh/project/all/"
-    weight: 50
+    weight: 40
 
   - name: "资源共享"
     url: "/zh/resources/datasets/"
-    weight: 60
+    weight: 50
 
   - name: "小组动态"
     url: "/zh/post/all/"
-    weight: 70
+    weight: 60
 
-  - name: "影响力"
-    url: "/zh/impact/awards/"
-    weight: 80
+  # - name: "影响力"
+  #   url: "/zh/impact/awards/"
+  #   weight: 70
 
   - name: "加入我们"
     url: "/zh/join/"
-    weight: 90
+    weight: 80

@@ -38,4 +38,3 @@ Change detection in remote sensing enables identifying alterations in surface ch
 }
 ```
 -->
-

@@ -80,6 +80,7 @@
 {{ $is_post_collection := or (eq $block.content.page_type "post") (in $folders "post") }}
 {{ $is_publication_collection := or (eq $block.content.page_type "publication") (in $folders "publication") }}
 {{ $is_people_collection := or (eq $block.content.page_type "authors") (in $folders "authors") }}
+{{ $is_project_collection := or (eq $block.content.page_type "project") (in $folders "project") }}
 {{ $block_id := "" }}
 {{ with $block.id }}{{ $block_id = . }}{{ end }}
 
@@ -102,6 +103,14 @@
     "design" $block.design
     "columns" $columns
   ) }}
+{{ else if eq $block_id "projects_all" }}
+  {{ partial "iris_project_list" (dict
+    "page" $page
+    "block" $block
+    "content" $block.content
+    "design" $block.design
+    "columns" $columns
+  ) }}
 {{ else }}
   <div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
 
@@ -110,6 +119,8 @@
     {{ range $index, $item := $query }}
       {{ if and $is_post_collection (or (eq $view 3) (eq (printf "%v" $view) "card")) }}
         {{ partial "iris_post_card" (dict "item" . "page" $block "index" $index "block_id" $block_id) }}
+      {{ else if and $is_project_collection (or (eq $view 3) (eq (printf "%v" $view) "card")) }}
+        {{ partial "iris_project_card" (dict "item" . "page" $block "index" $index "block_id" $block_id) }}
       {{ else }}
         {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index) }}
       {{ end }}

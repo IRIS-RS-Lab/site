@@ -38,4 +38,3 @@ Heretofore, global Burned Area (BA) products have only been available at coarse 
 }
 ```
 -->
-

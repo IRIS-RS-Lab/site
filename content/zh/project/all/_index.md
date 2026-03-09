@@ -1,5 +1,6 @@
 ---
-title: 全部项目
+title: ''
+linkTitle: 项目清单
 weight: 10
 type: landing
 sections:
@@ -11,7 +12,7 @@ sections:
   - block: collection
     id: projects_all
     content:
-      title: 项目列表
+      # title: 项目清单
       subtitle: ''
       count: 0
       filters:
